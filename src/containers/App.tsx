@@ -33,8 +33,8 @@ class App extends React.Component<IAppProps, IAppState> {
       .then(users => {this.setState({ robots: users})});
   }
 
-  onSearchChange = (event) => {
-    this.setState({ searchfield: event.currentTarget.value })
+  onSearchChange = (event: React.SyntheticEvent<HTMLInputElement>):void => {
+    this.setState({ searchfield: event.currentTarget.value})
   }
 
   render() {
